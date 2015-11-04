@@ -29,10 +29,16 @@
 					{{ end}}
 				</li>
 				{{ end }}
+				{{ if isset .Site.Params.contact "address_url" }}
+				<li>
+					<h3 class="icon fa-map-marker"><span class="label"></span></h3>
+					<a href="{{.Site.Params.contact.address_url }}">Google Maps</a>
+				</li>
+				{{ end }}
 				{{ if isset .Site.Params.contact "phone" }}
 				<li>
 					<h3 class="icon fa-mobile"><span class="label"></span></h3>
-					{{ .Site.Params.contact.phone }}
+					<a href="tel:{{ .Site.Params.contact.phone }}">{{ .Site.Params.contact.phone }}</a>
 				</li>
 				{{ end }}
 				{{ if isset .Site.Params.contact "email" }}
