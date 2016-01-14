@@ -10,7 +10,7 @@
 					<input type="hidden" name="_subject" value="New email from your portfolio" />
 					<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="{{ .Site.Params.contact.form.name }}" required/></div>
 					<div class="6u$ 12u$(xsmall)"><input type="email" name="_replyto" name="email" id="email" placeholder="{{ .Site.Params.contact.form.email }}" required/></div>
-					<div class="12u$"><textarea name="message" id="message" placeholder="{{ .Site.Params.contact.form.message }}" rows="4" required></textarea></div>
+					<div class="12u$"><textarea name="message" id="message" placeholder="{{ .Site.Params.contact.form.message }}" rows="6" required></textarea></div>
 					<input type="text" name="_gotcha" style="display:none" />
 					
 					<ul class="actions">
@@ -45,6 +45,12 @@
 				<li>
 					<h3 class="icon fa-envelope-o"><span class="label"></span></h3>
 					<a href="mailto:{{ .Site.Params.contact.email }}">{{ .Site.Params.contact.email }}</a>
+				</li>
+				{{ end }}
+				{{ if isset .Site.Params.contact "linkedin" }}
+				<li>
+					<h3 class="icon fa-linkedin-square"><span class="label"></span></h3>
+					<a href="{{ .Site.Params.contact.linkedin_url }}">{{ .Site.Params.contact.linkedin }}</a>
 				</li>
 				{{ end }}
 			</ul>
