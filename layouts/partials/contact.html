@@ -38,7 +38,7 @@
 				{{ if isset .Site.Params.contact "phone" }}
 				<li>
 					<h3 class="icon fa-mobile"><span class="label"></span></h3>
-					<a href="tel:{{ .Site.Params.contact.phone }}">{{ .Site.Params.contact.phone }}</a>
+					<a href="tel:{{ .Site.Params.contact.phone_url }}">{{ .Site.Params.contact.phone }}</a>
 				</li>
 				{{ end }}
 				{{ if isset .Site.Params.contact "email" }}
@@ -51,6 +51,12 @@
 				<li>
 					<h3 class="icon fa-linkedin-square"><span class="label"></span></h3>
 					<a href="{{ .Site.Params.contact.linkedin_url }}">{{ .Site.Params.contact.linkedin }}</a>
+				</li>
+				{{ end }}
+				{{ if isset .Site.Params.contact "facebook" }}
+				<li>
+					<h3 class="icon fa-facebook-square"><span class="label"></span></h3>
+					<a href="{{ .Site.Params.contact.facebook_url }}">{{ .Site.Params.contact.facebook }}</a>
 				</li>
 				{{ end }}
 			</ul>
